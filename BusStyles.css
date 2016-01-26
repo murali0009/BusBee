@@ -1,0 +1,139 @@
+body{
+    overflow: hidden;
+    background-color: #ffffff;
+/*    border-top: 0.4em solid black;
+    border-left: 0.4em solid black;
+    border-right: 0.4em solid black;
+    border-bottom: 0.4em solid black;
+    height:100%;
+    width:100%;
+    position:absolute;*/
+}
+
+/*.ng-hide-add {
+    /!* ensure visibility during the transition *!/
+    transition: 1s linear all;
+    display: block !important; /!* yes, important *!/
+}
+
+.animation-fade.ng-hide {
+    transition: 0s linear all;
+    opacity: 1;
+}
+.animation-fade.ng-hide-remove {
+    opacity: 0;
+}*/
+
+.ng-hide-remove {
+    -webkit-animation: fadeIn 2s;
+    animation: fadeIn 2s;
+    display: block !important;
+    opacity: 0;
+}
+
+
+#singlerow{
+    margin-bottom: 0px;
+}
+
+#card{
+    font-size: 3em;
+    height: 1.6em;
+}
+
+.card
+{
+    margin: 0.5rem 0 0.5rem 0;
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.16), 0 0px 0px 0 rgba(0, 0, 0, 0.12);
+}
+
+.odd-row
+{
+    background-color: #fafafa;
+}
+
+.even-row{
+    background-color: #f0f0f0;
+}
+
+#serviceNo
+{
+    padding-top: 0em;
+}
+
+#mainbus
+{
+    font-size: 0.6em;
+}
+
+.card-panel
+{
+    height:600px;
+    width:100%;
+}
+
+#subbus
+{
+    padding-top: 0.1em;
+    font-size: 0.4em;
+}
+
+.ImageSize
+{
+    height:50px;
+    width:40px;
+}
+#seatAvail
+{
+    padding-top: 0em;
+}
+
+#wheelchair
+{
+    padding-top: 0em;
+
+}
+.header {
+    height: 5%;
+    margin-top: 0;
+    text-align: center;
+    font-size: 5em;
+    background-color: #6e6e6e;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+}
+
+
+.nopadding {
+    padding: 0 !important;
+}
+
+.busrow{
+    font-size: 3em;
+    text-align: center;
+    -webkit-border-radius: 0.5em;
+    border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    padding-bottom: 0.1em;
+}
+
+.busheader{
+    font-size: 4em;
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+.seatingavailable
+{
+    background-color: green;
+}
+
+.standingavailable
+{
+    background-color: yellow;
+}
+
+.limitedstanding
+{
+    background-color: red;
+}
