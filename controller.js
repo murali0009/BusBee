@@ -33,7 +33,7 @@ var phonecatApp = angular.module('LTApp', ['ngRoute','ngAnimate']).config(['$rou
             center: new google.maps.LatLng(50, 2),
             zoom: 4,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
-            scrollwheel: false
+            scrollwheel: true
         };
 
         // init the map
@@ -73,9 +73,9 @@ var phonecatApp = angular.module('LTApp', ['ngRoute','ngAnimate']).config(['$rou
         // show the map and place some markers
         initMap();
 
-        setMarker(map, new google.maps.LatLng(51.508515, -0.125487), 'London', 'Just some content');
+        /*setMarker(map, new google.maps.LatLng(51.508515, -0.125487), 'London', 'Just some content');
         setMarker(map, new google.maps.LatLng(52.370216, 4.895168), 'Amsterdam', 'More content');
-        setMarker(map, new google.maps.LatLng(48.856614, 2.352222), 'Paris', 'Text here');
+        setMarker(map, new google.maps.LatLng(48.856614, 2.352222), 'Paris', 'Text here');*/
     };
 
     return {
@@ -91,9 +91,6 @@ var phonecatApp = angular.module('LTApp', ['ngRoute','ngAnimate']).config(['$rou
 
     console.log("Bus Controller");
     var serviceList = [];
-    $scope.seatavailable = $sce.trustAsResourceUrl('PassengerIcons_green.png');
-    $scope.standingavailable = $sce.trustAsResourceUrl('PassengerIcons_amber.png');
-    $scope.limitedstanding = $sce.trustAsResourceUrl('PassengerIcons_red.png');
     $scope.row_num = 6;
     $scope.slideIndex = 0;
     $scope.inpbusStopID = "";
@@ -178,13 +175,13 @@ var phonecatApp = angular.module('LTApp', ['ngRoute','ngAnimate']).config(['$rou
                                     serviceItem.NextBusArrival = serviceItem.NextBus["EstimatedArrival"];
                                     serviceItem.NextBusLoad = serviceItem.NextBus["Load"];
                                     if (serviceItem.NextBusLoad == "Seats Available") {
-                                        serviceItem.SeatImage = $scope.seatavailable;
+                                        serviceItem.SeatImage = "green";
                                     }
                                     else if (serviceItem.NextBusLoad == "Standing Available") {
-                                        serviceItem.SeatImage = $scope.standingavailable;
+                                        serviceItem.SeatImage = "orange";
                                     }
                                     else if (serviceItem.NextBusLoad == "Limited Standing") {
-                                        serviceItem.SeatImage = $scope.limitedstanding;
+                                        serviceItem.SeatImage = "red";
                                     }
                                     else
                                     {
@@ -217,13 +214,13 @@ var phonecatApp = angular.module('LTApp', ['ngRoute','ngAnimate']).config(['$rou
                                 seconds = seconds - (days * 24 * 60 * 60) - (hours * 60 * 60) - (minutes * 60);
 
                                 if (serviceItem.SubsequentBusLoad == "Seats Available") {
-                                    serviceItem.SeatImage1 = $scope.seatavailable;
+                                    serviceItem.SeatImage1 = "green";
                                 }
                                 else if (serviceItem.SubsequentBusLoad == "Standing Available") {
-                                    serviceItem.SeatImage1 = $scope.standingavailable;
+                                    serviceItem.SeatImage1 = "orange";
                                 }
                                 else if (serviceItem.SubsequentBusLoad == "Limited Standing") {
-                                    serviceItem.SeatImage1 = $scope.limitedstanding;
+                                    serviceItem.SeatImage1 = "red";
                                 }
                                 else
                                 {
