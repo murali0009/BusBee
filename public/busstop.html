@@ -1,0 +1,52 @@
+<div class="row entirerow">
+    <nav class="teal lighten-2">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Bus Arrival {{busStopName}}{{busStopID}}</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><input type="text" ng-model="inpbusStopID"></li>
+                <li><input type="button" ng-click='clickBusStopID()'></li>
+            </ul>
+        </div>
+    </nav>
+    <div>
+        <div class="col s12 m12 l12"  id="card">
+            <div ng-repeat="(i,List) in pageList track by $index" ng-cloak ng-show="slideIndex == i">
+                <div ng-repeat="service in List" class="row-eq-height" ng-cloak="" style="list-style-type:none;" >
+                    <div class="col s12 m12 l12" ng-class-even="'even-row'" ng-class-odd="'odd-row'">
+                                <div class="col s4 m4 l4" id="serviceNo">
+                                    <div style="float: left;">{{service.ServiceNo}}</div>
+                                </div>
+                                <div class="col s4 m4 l4" id="mainbus">
+                                    <div class="col s10 m7 l7">
+                                        <div style="float: left;">{{service.DiffNextBus}} </div><div ng-if="service.DiffNextBus != 'Arr' && service.DiffNextBus != '--' "><small>&nbsp;Mins</small></div>
+                                    </div>
+                                    <div class="col s1 m2 l2">
+                                        <span ng-style="{'background-color':service.SeatImage,'float': 'left','-moz-border-radius': '1em', '-webkit-border-radius': '1em', 'border-radius': '1em'}">&nbsp;&nbsp;&nbsp;</span>
+                                    </div>
+                                    <div class="col s1 m2 l2">
+                                        <div id="mainwheelchair">
+                                            <i ng-class="{true:'fa fa-wheelchair', false: 'fa'}[service.NextBusFeature == 'WAB']"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class ="col s4 m4 l4" id="subbus">
+                                    <div class="col s10 m7 l7">
+                                        <div style="float: left;">{{service.DiffSubsequentBus }} </div><div ng-if="service.DiffSubsequentBus != 'Arr' && service.DiffSubsequentBus != '' "><small>&nbsp;Mins</small> </div>
+                                    </div>
+                                    <div class="col s1 m2 l2">
+                                        <span ng-style="{'background-color':service.SeatImage,'float': 'left','-moz-border-radius': '1em', '-webkit-border-radius': '1em', 'border-radius': '1em'}">&nbsp;&nbsp;&nbsp;</span>
+                                    </div>
+                                    <div class="col s1 m2 l2">
+                                        <div id="subwheelchair">
+                                            <i ng-class="{true:'fa fa-wheelchair', false: 'fa'}[service.NextBusFeature == 'WAB']"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
