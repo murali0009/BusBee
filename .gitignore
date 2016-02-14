@@ -12,6 +12,9 @@
 bin/
 gen/
 
+# node_modules
+node_modules/
+
 # Gradle files
 .gradle/
 build/
