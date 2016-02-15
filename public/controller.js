@@ -5,12 +5,12 @@ var phonecatApp = angular.module('LTApp', ['ngRoute','ngAnimate']).config(['$rou
     function($routeProvider, $locationProvider) {
         $routeProvider
             .when('/busstop', {
-                templateUrl: 'BusBee/busstop.html',
+                templateUrl: 'busstop.html',
                 controller: 'BeeBusController',
                 controllerAs: 'BusBee'
             })
             .when('/', {
-                templateUrl: 'BusBee/maps.html',
+                templateUrl: 'maps.html',
                 controller: 'BeeMapsController',
                 controllerAs: 'LTAMaps'
             })
