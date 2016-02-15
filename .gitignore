@@ -37,6 +37,7 @@ captures/
 # Webstorm files
 *.idea
 *.iml
+.idea/
 
 # Zip Files
 *.zip
