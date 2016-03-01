@@ -2,6 +2,7 @@ body {
     overflow: hidden;
     background-color: #ffffff;
 }
+html, body { height: 100%; width: 100%; margin: 0; }
 
 .ng-hide-remove {
     -webkit-animation: fadeIn 2s;
