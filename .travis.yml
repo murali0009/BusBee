@@ -9,8 +9,8 @@ node_js:
 before_deploy: "echo 'ready?'"
 deploy:
   provider: heroku
-  api_key:
-    secure: f34d08d7e0c68bc2227baaeef149261fba6679a2
+  api_key: f34d08d7e0c68bc2227baaeef149261fba6679a2
+  app: arcane-falls-36452
 after_deploy: "echo 'done'"
 
 
