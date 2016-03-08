@@ -8,7 +8,9 @@ node_js:
   - "iojs"
 before_deploy: "echo 'ready?'"
 deploy:
-  provider: azure_web_apps
+  provider: heroku
+  api_key:
+    secure: f34d08d7e0c68bc2227baaeef149261fba6679a2
 after_deploy: "echo 'done'"
 
 
